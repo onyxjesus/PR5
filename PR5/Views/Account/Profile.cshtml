@@ -1,0 +1,30 @@
+﻿@model PR5.Models.UserProfileModel
+
+@{ ViewBag.Title = "View User Data"; }
+
+<h1>@ViewBag.Title</h1>
+
+<form>
+    <div class="form-group">
+        <label for="email">Email адреса</label>
+        <input type="email" readonly class="form-control" id="email" aria-describedby="emailHelp" value="@Model.Email" />
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+        <label for="username">Ім'я користувача</label>
+        <input type="text" readonly class="form-control" id="username" value="@Model.UserName" />
+    </div>
+    <div class="form-group">
+        <label for="names">Ім'я, прізвище</label>
+        <input type="text" readonly class="form-control" id="names" value="@Model.FirstName, @Model.LastName" />
+    </div>
+    <div class="form-group">
+        <label for="phone-number">Номер телефону</label>
+        <input type="text" readonly class="form-control" id="phone-number" value="@Model.PhoneNumber" />
+    </div>
+</form>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
